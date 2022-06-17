@@ -42,6 +42,7 @@ type User struct {
 	SessionTTL    int32     `db:"session_ttl"`
 	CreatedAt     time.Time `db:"created_at"`
 	UpdatedAt     time.Time `db:"updated_at"`
+	UserName      string    `db:"username"`
 	PasswordHash  string    `db:"password_hash"`
 	Email         string    `db:"email"`
 	EmailVerified bool      `db:"email_verified"`
