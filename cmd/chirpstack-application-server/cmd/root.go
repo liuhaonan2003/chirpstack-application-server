@@ -39,14 +39,15 @@ func init() {
 	// defaults
 	viper.SetDefault("general.grpc_default_resolver_scheme", "passthrough")
 	viper.SetDefault("general.password_hash_iterations", 100000)
-	viper.SetDefault("postgresql.dsn", "postgres://localhost/chirpstack_as?sslmode=disable")
-	viper.SetDefault("postgresql.automigrate", true)
+	viper.SetDefault("postgresql.dsn", "postgres://postgres:admin001@localhost:5433/postgres?sslmode=disable") //postgres://postgres:admin001@localhost:5433/postgres?sslmode=disable  postgres://localhost/chirpstack_as?sslmode=disable
+	viper.SetDefault("postgresql.automigrate", false)
 	viper.SetDefault("postgresql.max_idle_connections", 2)
 	viper.SetDefault("redis.servers", []string{"localhost:6379"})
 	viper.SetDefault("application_server.api.public_host", "localhost:8001")
 	viper.SetDefault("application_server.id", "6d5db27e-4ce2-4b2b-b5d7-91f069397978")
 	viper.SetDefault("application_server.api.bind", "0.0.0.0:8001")
-	viper.SetDefault("application_server.external_api.bind", "0.0.0.0:8080")
+	viper.SetDefault("application_server.external_api.bind", "0.0.0.0:8081")
+	viper.SetDefault("application_server.external_api.jwt_secret", "verysecret")
 	viper.SetDefault("join_server.bind", "0.0.0.0:8003")
 	viper.SetDefault("application_server.integration.marshaler", "json_v3")
 	viper.SetDefault("application_server.integration.mqtt.server", "tcp://localhost:1883")
