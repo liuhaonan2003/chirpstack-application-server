@@ -39,7 +39,7 @@ func init() {
 	// defaults
 	viper.SetDefault("general.grpc_default_resolver_scheme", "passthrough")
 	viper.SetDefault("general.password_hash_iterations", 100000)
-	viper.SetDefault("postgresql.dsn", "postgres://postgres:admin001@localhost:5433/postgres?sslmode=disable") //postgres://postgres:admin001@localhost:5433/postgres?sslmode=disable  postgres://localhost/chirpstack_as?sslmode=disable
+	viper.SetDefault("postgresql.dsn", "postgres://chirpstack_as:chirpstack_as@localhost:5433/chirpstack_as?sslmode=disable") //postgres://chirpstack_as:chirpstack_as@localhost:5433/chirpstack_as?sslmode=disable postgres://postgres:admin001@localhost:5433/postgres?sslmode=disable  postgres://localhost/chirpstack_as?sslmode=disable
 	viper.SetDefault("postgresql.automigrate", false)
 	viper.SetDefault("postgresql.max_idle_connections", 2)
 	viper.SetDefault("redis.servers", []string{"localhost:6379"})
